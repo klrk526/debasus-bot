@@ -9,9 +9,12 @@ from aiogram.types import (
 )
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
+import os
+from dotenv import load_dotenv
+
 
 # ⚠️ ВСТАВЬ СЮДА СВОЙ НОВЫЙ ТОКЕН (старый скомпрометирован, его нужно отозвать в @BotFather через /revoke)
-BOT_TOKEN = "8904204620:AAFORzdh_LxuUeu4B3pWSXwc5Z-WoAnx5-A"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 logging.basicConfig(level=logging.INFO)
 
