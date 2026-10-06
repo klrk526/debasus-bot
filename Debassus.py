@@ -71,6 +71,13 @@ async def cmd_start(message: Message):
         parse_mode="HTML"
     )
 
+@dp.message(Command("admin"))
+async def cmd_admin(message: Message):
+    if message.from_user.id not in ADMIN_IDS:
+        await message.answer("У вас нет прав администратора.")
+        return
+    await message.answer("Привет, админиистратор!")
+
 
 @dp.callback_query(F.data == "promo_today")
 async def show_promo(callback: CallbackQuery):
