@@ -12,6 +12,8 @@ from aiogram.fsm.state import State, StatesGroup
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 
 # ⚠️ ВСТАВЬ СЮДА СВОЙ НОВЫЙ ТОКЕН (старый скомпрометирован, его нужно отозвать в @BotFather через /revoke)
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -293,5 +295,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Бот остановлен.")
 
-#черновик бота 
-
+#черновик бота
