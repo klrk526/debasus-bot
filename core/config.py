@@ -1,5 +1,4 @@
-#загрузка настроек из .env: токен бота, ID админо, URL базы данных
-ilya/first-setup
+# загрузка настроек из .env
 from pydantic_settings import BaseSettings
 
 
@@ -7,9 +6,12 @@ class Settings(BaseSettings):
     BOT_TOKEN: str
     admin_ids: str = ""
     database_url: str = "sqlite+aiosqlite:///bot.db"
+    menu_url: str = "https://debassus.ru/vrn/menu/menudbvena.pdf"
 
-    class Config:
-        env_file = ".env"
+    model_config = {
+        "env_file": ".env",
+        "extra": "ignore",
+    }
 
 
 settings = Settings()

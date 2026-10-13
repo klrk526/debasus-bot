@@ -1,8 +1,9 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
+from core.config import settings
 main_menu_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="🍽 Меню", callback_data="menu"),
+        InlineKeyboardButton(text="🍽 Меню", url=settings.menu_url),
         InlineKeyboardButton(text="🔥 Акции дня", callback_data="promo"),
     ],
     [
