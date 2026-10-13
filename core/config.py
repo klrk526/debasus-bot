@@ -1,5 +1,5 @@
 #загрузка настроек из .env: токен бота, ID админо, URL базы данных
-ilya/first-setup
+
 from pydantic_settings import BaseSettings
 
 
