@@ -1,0 +1,5 @@
+aiogram>=3.31.0
+python-dotenv>=1.2.0
+sqlalchemy>=2.1.0
+aiosqlite>=0.22.0
+pre-commit>=4.6.0
